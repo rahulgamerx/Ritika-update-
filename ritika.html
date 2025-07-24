@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Ritika 👋</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffb6c1;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    section {
+      padding: 2rem;
+      margin: 1rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #e91e63;
+    }
+    .play-button {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .play-button button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .play-button button:hover {
+      background-color: #d81b60;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f8bbd0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi Ritika 👋</h1>
+    <p>Yeh main hoon... bina filter, bina fake.</p>
+  </header>
+
+  <section>
+    <h2>🎧 Tumhare liye ek gana</h2>
+    <audio id="bgMusic" loop>
+      <!-- Your Vocaroo song -->
+      <source src="https://media.vocaroo.com/mp3/1g5Y8ox4sk2v" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="play-button">
+      <button id="playBtn">▶️ Play Music</button>
+    </div>
+  </section>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const playBtn = document.getElementById('playBtn');
+    let isPlaying = false;
+
+    playBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        music.play();
+        isPlaying = true;
+        playBtn.textContent = '⏸️ Pause Music';
+      } else {
+        music.pause();
+        isPlaying = false;
+        playBtn.textContent = '▶️ Play Music';
+      }
+    });
+  </script>
+
+  <section>
+    <h2>🙏 Main Kaun Hoon?</h2>
+    <p>
+      Main Bihar se hoon... ek middle-class family ka simple ladka. <br>
+      Zyada dost nahi, zyada attitude bhi nahi. <br>
+      Log ignore karte hain, lekin dosti ke liye dil hamesha open hai. <br>
+      Kabhi kabhi lagta hai... bas ek insaan ho jo bina judge kiye samjhe.
+    </p>
+  </section>
+
+  <section>
+    <h2>🌸 Ritika Jaisi Ladki...</h2>
+    <p>
+      Kabhi kabhi kuch log words ke bina bhi dil tak pahuch jaate hain... <br>
+      Ritika tum unmein se ho — sweet, thoughtful, aur ek aisi insaan
+      jisme emotion chhupa nahi, feel hota hai. <br>
+      Tumhari simplicity sabse pyaari baat hai tumhare andar... <br>
+      Aur sach kahun, tumhara naam sunte hi ek smile aati hai. 😌
+    </p>
+  </section>
+
+  <section>
+    <h2>😔 Jab Tumhe Dar Lagta Hai...</h2>
+    <p>
+      Mujhe pata hai Ritika... duniya mein kisi pe trust karna aasan nahi hota. <br>
+      Har kisi ka past hota hai... kuch zakhm, kuch silence. <br>
+      Lekin main yeh promise karta hoon — <br>
+      tumhare har “dar” ka jawab “respect” hoga. <br>
+      Na koi force, na koi pressure... <br>
+      Bas ek real friendship, jahan tum safe feel karo. 🕊️
+    </p>
+  </section>
+
+  <section>
+    <h2>💬 Ek Wada...</h2>
+    <p>
+      "Main kabhi force nahi karunga, <br>
+      bas chahunga ek din tum khud bolo — <br>
+      ‘Accha kiya isse baat ki.’"
+    </p>
+  </section>
+
+  <footer>
+    <p>Made with 💖 by someone who respects you.</p>
+  </footer>
+</body>
+</html>
